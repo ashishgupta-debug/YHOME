@@ -15,6 +15,7 @@ import {
   FaShare,
 } from 'react-icons/fa';
 import Contact from '../components/Contact.jsx';
+import Header from '../components/Header.jsx';
 
 // https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.
 
@@ -52,17 +53,18 @@ export default function Listing() {
 
   return (
     <main>
-      {loading && <p className='text-center my-7 text-2xl text-colorPrimary'>Loading...</p>}
+      {loading && <p className='py-20 text-center my-7 text-2xl text-colorPrimary'>Loading...</p>}
       {error && (
-        <p className='text-center my-7 text-2xl text-colorPrimary'>Something went wrong!</p>
+        <p className='mt-20 text-center my-7 text-2xl text-colorPrimary'>Something went wrong!</p>
       )}
       {listing && !loading && !error && (
         <div>
           <Swiper navigation>
             {listing.imageUrls.map((url) => (
               <SwiperSlide key={url}>
+
                 <div
-                  className='h-[550px]'
+                  className='mt-20 h-[400px] w-[900px] mx-auto border shadow-2xl rounded-3xl'
                   style={{
                     background: `url(${url}) center no-repeat`,
                     backgroundSize: 'cover',

@@ -42,7 +42,10 @@ export default function SignUp() {
   };
   return (
     <div className="pt-20 p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl text-center font-semibold my-7 text-colorPrimary">Sign Up</h1>
+      <h1 className="text-3xl text-center font-semibold mt-7 mb-2 text-colorPrimary">Sign Up</h1>
+      <p className='text-colorDarkGray text-sm mb-5 text-center'>
+        (Create an Account if You want to resister your property!)
+      </p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"

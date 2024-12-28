@@ -81,8 +81,9 @@ export default function Home() {
                 style={{
                   background: `url(${listing.imageUrls[0]}) center no-repeat`,
                   backgroundSize: 'cover',
+
                 }}
-                className='h-[500px]'
+                className='h-[400px] w-[900px] mx-auto border shadow-2xl rounded-3xl'
                 key={listing._id}
               ></div>
             </SwiperSlide>
