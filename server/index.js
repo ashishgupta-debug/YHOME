@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGOURL)
 });
 
 const __dirname = path.resolve();
+
 const app = express();
 
 app.use(express.json());
@@ -32,7 +33,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 app.use('/api/listing', listingRouter);
 
-app.use(express.static(path.join(__dirname, './client/dist')));
+app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
